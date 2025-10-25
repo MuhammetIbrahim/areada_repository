@@ -21,4 +21,4 @@ EXPOSE 8000
 # Set Python path
 ENV PYTHONPATH=/app
 
-CMD ["uv", "run", "python", "backend/main.py"]
+CMD ["uv", "run", "uvicorn", "backend.main:app", "--host", "0.0.0.0", "--port", "8000"]

@@ -10,7 +10,7 @@ class WorkerSettings(BaseSettings):
     CELERY_RESULT_BACKEND: str
     
     class Config:
-        env_file = "../.env"
+        env_file = [".env", "../.env"]
 
 settings = WorkerSettings()
 
